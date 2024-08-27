@@ -8,6 +8,10 @@ function getQueryParams() {
 function displayVideo() {
     const params = getQueryParams();
     const videoUrl = params.video_url;
+    if (videoUrl === 'Not provided') {
+        document.getElementById('videoContainer').innerHTML = '<center><h1>Video URL not provided!</h1></center>';
+        return;
+    }
     const videoId = new URL(videoUrl).searchParams.get('v');
     if (videoId) {
         const embedUrl = `https://www.youtube.com/embed/${videoId}`;
