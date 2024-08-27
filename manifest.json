@@ -1,0 +1,34 @@
+{
+    "name": "ytIframeext",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "author": "chsyamkumar.in",
+    "description": "Extension for Youtube video Iframe",
+    "icons": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "logo.png",
+            "48": "logo.png",
+            "128": "logo.png"
+        },
+        "default_title": "ytIframeext",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
